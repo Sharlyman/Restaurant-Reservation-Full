@@ -28,14 +28,13 @@ function ReservationForm({ form, handleChange, handleSubmit }) {
       </label>
       <label htmlFor="mobile_number">
         Phone Number:
-        <input
-          className="form-control my-2"
-          name="mobile_number"
-          value={form["mobile_number"]}
-          placeholder="(---) --- ----"
-          type="tel"
-          onChange={handleChange}
-        />
+   <input type="tel"
+   className="form-control my-2" 
+   name="mobile_number" 
+   value={form["mobile_number"]} 
+   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" 
+   onChange={handleChange}
+   />
       </label>
       <label htmlFor="reservation_date">
         Reservation Date:
